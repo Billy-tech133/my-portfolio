@@ -2,13 +2,13 @@ import React from "react"
 import { FaAlignJustify } from "react-icons/fa"
 import navlinks from "../constants/links"
 import { Link } from "gatsby"
-const Navbar = () => {
+const Navbar = ({ show, toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="nav-center">
-        <div className="nav-header">
+        <div className={show ? "hide-btn" : "nav-header"}>
           <h1 className="nav-logo">Brown</h1>
-          <button type="button" className="toggle-btn">
+          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignJustify />
           </button>
         </div>
