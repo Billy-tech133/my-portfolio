@@ -1,16 +1,49 @@
 import React from "react"
-import stackList from "../constants/stack_content"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const Stack = () => {
+  const {
+    allStrapiStack: { nodes },
+  } = useStaticQuery(graphql`
+    {
+      allStrapiStack {
+        nodes {
+          name
+          id
+          image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: FIXED
+                  width: 128
+                  height: 128
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
-    <main>
-      <h2>my skill stack</h2>
-      <div>
-        {stackList.map(stack => {
-          const { id, image, name } = stack
+    <main className="stack">
+      <h2 className="stack-heading">my skill stack</h2>
+      <div className="stack-content">
+        {nodes.map(stack => {
+          const {
+            name,
+            id,
+            image: { localFile },
+          } = stack
           return (
-            <div key={id}>
-              <img src={image} alt={name} />
-              <h3>{name}</h3>
+            <div key={id} className="single-stack">
+              <GatsbyImage
+                className="stack-img"
+                image={getImage(localFile)}
+                alt={name}
+              />
+              <h4>{name}</h4>
             </div>
           )
         })}
