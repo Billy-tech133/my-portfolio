@@ -1,12 +1,17 @@
 import React from "react"
 import Layout from "../components/Layout"
-const contact = () => {
+import { useForm } from "@formspree/react"
+const Contact = () => {
+  const [state, handleSubmit] = useForm("mdoyvovw")
+  if (state.succeeded) {
+    return <h4>Thank you for reaching out!</h4>
+  }
   return (
     <Layout>
       <section className="contact-page">
         <article className="contact-form">
           <h3>Get in touch</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
@@ -27,7 +32,11 @@ const contact = () => {
                 placeholder="message"
                 className="form-control"
               />
-              <button type="submit" className="submit-btn btn">
+              <button
+                type="submit"
+                disable={state.submitting}
+                className="submit-btn btn"
+              >
                 Submit
               </button>
             </div>
@@ -38,4 +47,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
