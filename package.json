@@ -22,7 +22,10 @@
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-responsive-carousel": "^3.2.21",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "2.3.2"
