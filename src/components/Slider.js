@@ -14,18 +14,16 @@ const Slide = ({ nodes }) => {
           image: { localFile },
         } = card
         return (
-          <div>
-            <div key={id} className="certificate-card">
-              <GatsbyImage
-                className="certificate-img"
-                image={getImage(localFile)}
-                alt={name}
-              />
-              <h5 className="certificate-name">{name}</h5>
-              <Link to={url} className="certificate-btn btn">
-                View Certificate
-              </Link>
-            </div>
+          <div key={id} className="certificate-card">
+            <GatsbyImage
+              className="certificate-img"
+              image={getImage(localFile)}
+              alt={name}
+            />
+            <h5 className="certificate-name">{name}</h5>
+            <Link to={url} className="certificate-btn btn">
+              View Certificate
+            </Link>
           </div>
         )
       })}

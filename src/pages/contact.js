@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Confirmation from "../components/Confirmation"
 import { useForm } from "@formspree/react"
 const Contact = () => {
   const [state, handleSubmit] = useForm("mdoyvovw")
   if (state.succeeded) {
-    return <h4>Thank you for reaching out!</h4>
+    return <Confirmation />
   }
   return (
     <Layout>

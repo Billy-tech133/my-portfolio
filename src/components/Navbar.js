@@ -2,12 +2,19 @@ import React from "react"
 import { FaAlignJustify } from "react-icons/fa"
 import navlinks from "../constants/links"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
 const Navbar = ({ show, toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="nav-center">
         <div className={show ? "hide-btn" : "nav-header"}>
-          <h1 className="nav-logo">Brown</h1>
+          <StaticImage
+            className="nav-logo"
+            layout="constrained"
+            src="../assets/images/logo-removebg-preview.png"
+            alt="brown"
+          />
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignJustify />
           </button>
@@ -23,7 +30,9 @@ const Navbar = ({ show, toggleSidebar }) => {
           })}
         </div>
       </div>
-      <button className="nav-resume btn">Resume</button>
+      <Link to="/resume" className="nav-resume btn">
+        Resume
+      </Link>
     </nav>
   )
 }

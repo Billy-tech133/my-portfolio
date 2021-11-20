@@ -7,7 +7,7 @@ const Certifications = () => {
     allStrapiCertifications: { nodes },
   } = useStaticQuery(graphql`
     {
-      allStrapiCertifications(limit: 6) {
+      allStrapiCertifications(limit: 4) {
         nodes {
           id
           name
