@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import { StaticImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const About = ({
   data: {
@@ -14,6 +14,7 @@ const About = ({
     aboutMe,
     image: { localFile },
   } = nodes[0]
+
   return (
     <Layout>
       <section className="about">
@@ -21,7 +22,7 @@ const About = ({
           <div>
             <StaticImage
               placeholder="blurred"
-              src="../assets/images/brown.png"
+              src="../assets/images/hero.png"
               className="about-img"
               alt={title}
             />

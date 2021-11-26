@@ -16,12 +16,12 @@ const Hero = () => {
             contact me
           </Link>
         </article>
-        <StaticImage
+        {/* <StaticImage
           placeholder="blurred"
           src="../assets/images/brown.png"
           className="hero-img"
           alt="billy"
-        />
+        /> */}
       </div>
     </header>
   )

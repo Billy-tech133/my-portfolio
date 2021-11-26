@@ -16,6 +16,8 @@ const projects = ({ data }) => {
               projectTitle,
               projectDescription,
               stack,
+              codeUrl,
+              previewUrl,
             } = item
             const Image = getImage(localFile)
             return (
@@ -41,11 +43,11 @@ const projects = ({ data }) => {
                     })}
                   </div>
                   <div className="project-links">
-                    <Link to="/" className="project-link">
+                    <Link to={codeUrl} className="project-link">
                       <h5>source code</h5>
                       <FaGithub className="project-fa" />
                     </Link>
-                    <Link to="/" className="project-link">
+                    <Link to={previewUrl} className="project-link">
                       <h5>view project</h5>
                       <FaArrowAltCircleUp className="project-fa" />
                     </Link>
@@ -67,6 +69,8 @@ export const query = graphql`
         id
         projectTitle
         projectDescription
+        codeUrl
+        previewUrl
         stack {
           id
           title

@@ -1,11 +1,5 @@
 import React from "react"
-import {
-  FaFacebookSquare,
-  FaLinkedin,
-  FaGithubSquare,
-  FaTwitter,
-  FaTwitterSquare,
-} from "react-icons/fa"
+import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa"
 const data = [
   {
     id: 1,

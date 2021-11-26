@@ -8,13 +8,13 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
 
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:5000`,
+        apiURL: `https://lamfihs-portfolio.herokuapp.com`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`Stack`, `Certifications`, `Projects`],
         singleTypes: [`About`],
