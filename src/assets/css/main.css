@@ -910,7 +910,13 @@ text-align: center;
   background: var(--clr-grey-3);
   color: var(--clr-grey-6);
 }
+.about-skill  {
+  background: var(--clr-primary-2);
+}
+.about-stack {
+  margin-top: 1.5rem;
 
+}
 .project-links {
   display: flex;
   align-items: center;

@@ -9,11 +9,7 @@ const About = ({
   },
 }) => {
   console.log(nodes)
-  const {
-    title,
-    aboutMe,
-    image: { localFile },
-  } = nodes[0]
+  const { title, aboutMe, stack } = nodes[0]
 
   return (
     <Layout>
@@ -31,6 +27,16 @@ const About = ({
             <h2 className="about-title">{title}</h2>
             <div className="underline"></div>
             <p className="about-desc">{aboutMe}</p>
+            <div className="project-stack about-stack">
+              {stack.map(skill => {
+                const { id, title } = skill
+                return (
+                  <span className="project-skill about-skill" key={id}>
+                    {title}
+                  </span>
+                )
+              })}
+            </div>
           </article>
         </div>
       </section>
@@ -43,6 +49,10 @@ export const query = graphql`
       nodes {
         title
         aboutMe
+        stack {
+          id
+          title
+        }
         image {
           localFile {
             childImageSharp {
