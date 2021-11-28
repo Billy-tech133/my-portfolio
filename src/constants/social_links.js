@@ -14,7 +14,7 @@ const data = [
   {
     id: 3,
     icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
-    url: "http://github.com/",
+    url: "https://github.com/Billy-tech133",
   },
 ]
 
