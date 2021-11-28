@@ -53,6 +53,7 @@ const resume = () => {
                 <h5 className="card-text">javascript</h5>
                 <h5 className="card-text">React.js</h5>
                 <h5 className="card-text">Gatsby.js</h5>
+                <h5 className="card-text">Graphgl.js</h5>
                 <h5 className="card-text">firebase</h5>
                 <h5 className="card-text">Git</h5>
               </article>
